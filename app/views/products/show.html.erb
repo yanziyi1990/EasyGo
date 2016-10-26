@@ -1,4 +1,44 @@
 <p id="notice"><%= notice %></p>
 
+<%= grid(@tasks_grid) do |g|
+
+  g.column name: 'ID',attribute: 'id' do |task|
+    task.id
+  end
+
+  g.column name: 'SKU',attribute: 'sku' do |task|
+    task.sku
+  end
+
+  g.column name: 'Product Name',attribute: 'product_name' do |task|
+    task.product_name
+  end
+
+  g.column name: 'Product Description',attribute: 'product_description' do |task|
+    task.product_description
+  end
+
+
+  g.column name: 'Category',attribute: 'category' do |task|
+    task.category
+  end
+  g.column name: 'Color',attribute: 'color' do |task|
+    task.color
+  end
+  g.column name: 'Vendor',attribute: 'vendor' do |task|
+    task.vendor
+  end
+
+  %w(image_url1 image_url1 image_url1).each do |image|
+    g.column do |task|
+      image_tag(task.send(image))
+    end
+  end
+
+  g.column do |task|
+    link_to('Edit', edit_product_path(@product))
+  end
+end -%>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :warehouse_units
   devise_for :users
   devise_scope :user do
     authenticated :user do

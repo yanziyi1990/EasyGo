@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Warehouse Units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sku</th>
+      <th>Count</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @warehouse_units.each do |warehouse_unit| %>
+      <tr>
+        <td><%= warehouse_unit.name %></td>
+        <td><%= warehouse_unit.sku %></td>
+        <td><%= warehouse_unit.count %></td>
+        <td><%= warehouse_unit.status %></td>
+        <td><%= link_to 'Show', warehouse_unit %></td>
+        <td><%= link_to 'Edit', edit_warehouse_unit_path(warehouse_unit) %></td>
+        <td><%= link_to 'Destroy', warehouse_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Warehouse unit', new_warehouse_unit_path %>

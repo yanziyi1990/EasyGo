@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @warehouse_unit.name %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @warehouse_unit.sku %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @warehouse_unit.count %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @warehouse_unit.status %>
+</p>
+
+<%= link_to 'Edit', edit_warehouse_unit_path(@warehouse_unit) %> |
+<%= link_to 'Back', warehouse_units_path %>
