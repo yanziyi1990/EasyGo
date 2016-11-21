@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_number: MyString
+  sku: MyString
+  shipping_address: MyText
+  latest_shipping_date: 2016-11-21
+  order_status: MyString
+  warehouse_status: MyString
+
+two:
+  order_number: MyString
+  sku: MyString
+  shipping_address: MyText
+  latest_shipping_date: 2016-11-21
+  order_status: MyString
+  warehouse_status: MyString

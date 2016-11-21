@@ -1,0 +1,7 @@
+# Logfile created on 2016-10-25 19:26:08 -0700 by logger.rb/53141
+[2016-10-25T19:26:07 (process) #81056][INFO] Loading Rails (4.2.5.1) integration
+[2016-10-25T19:26:08 (process) #81056][ERROR] Push api key not set after loading config
+[2016-10-25T19:26:08 (process) #81056][ERROR] Not starting, no valid config for this environment
+[2016-10-25T20:29:57 (process) #81691][INFO] Loading Rails (4.2.5.1) integration
+[2016-10-25T20:29:58 (process) #81691][ERROR] Push api key not set after loading config
+[2016-10-25T20:29:58 (process) #81691][ERROR] Not starting, no valid config for this environment

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :warehouse_units
   devise_for :users
   devise_scope :user do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :products
+  resources :orders
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
