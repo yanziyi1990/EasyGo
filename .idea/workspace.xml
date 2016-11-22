@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="741f3cec-754e-414a-87af-58d113b850e1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/-BpoKNGwtrU2nv8CsWCtCCqTIc9-cI7yEQFm0b0pN1U.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/-BpoKNGwtrU2nv8CsWCtCCqTIc9-cI7yEQFm0b0pN1U.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/09h8wmpMqfWwdQTlC8foU_-X1rQouSro3hqcRBWDlrg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/09h8wmpMqfWwdQTlC8foU_-X1rQouSro3hqcRBWDlrg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7m1xZqU70NRZtx0LpzWD_icE0IB8d52kyqSS90IpNCQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7m1xZqU70NRZtx0LpzWD_icE0IB8d52kyqSS90IpNCQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/81xB5YujhuAfEyOC0m9OsCEsyd6Oeag9VQNja2Igxeo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/81xB5YujhuAfEyOC0m9OsCEsyd6Oeag9VQNja2Igxeo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/BDzwEb0uU7UplNJ3ea8FFKz8taL1VnwKudg7RpbX6Vo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/BDzwEb0uU7UplNJ3ea8FFKz8taL1VnwKudg7RpbX6Vo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/LQER0Jw-AYlIsyHUhyPgCrfPQ4FH-RWKQZmbTB3kGkY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/LQER0Jw-AYlIsyHUhyPgCrfPQ4FH-RWKQZmbTB3kGkY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/P7RYnVypkyVZ1rZafwP1ZGlPkhdt5NfoQDWadlg7Mb8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/P7RYnVypkyVZ1rZafwP1ZGlPkhdt5NfoQDWadlg7Mb8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PPxXZ8SN56QIkOo0gMPj_8pYYmg82PK-LTkpU20lxnk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PPxXZ8SN56QIkOo0gMPj_8pYYmg82PK-LTkpU20lxnk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PQh-DB2m9Xjfs0PjmooRnf9Sofkzzj0ZTIZH8t0zxzc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PQh-DB2m9Xjfs0PjmooRnf9Sofkzzj0ZTIZH8t0zxzc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/R_cqcDW_2Agok1SkFS7Iq8tVbetgzT9efbU7EPoJKkk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/R_cqcDW_2Agok1SkFS7Iq8tVbetgzT9efbU7EPoJKkk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/TXI0uXFeJh-gpITXIUcZVsAIVMLwXJdVuS5vA-JJG5Q.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/TXI0uXFeJh-gpITXIUcZVsAIVMLwXJdVuS5vA-JJG5Q.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UmXrANTG12pHyAbIZVU8f-T3fsyIV0jwCEATUyldHKg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/UmXrANTG12pHyAbIZVU8f-T3fsyIV0jwCEATUyldHKg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VHYkQ5Pg_RnUlZU6i7-A2-SNULEJ1QESLcaFutHcjVw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VHYkQ5Pg_RnUlZU6i7-A2-SNULEJ1QESLcaFutHcjVw.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aMCTU40BHMAbSYErsrBlmSpQAex7ddppQNfS8sjOI4k.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aMCTU40BHMAbSYErsrBlmSpQAex7ddppQNfS8sjOI4k.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/bpfa7iZErkE5dfLQt0BhAuQaq10fkqAENmXlNW74mDI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/bpfa7iZErkE5dfLQt0BhAuQaq10fkqAENmXlNW74mDI.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ghJdDXK0LVxtL4N6xMi5mwAmbL9HS_cOYyRg3cYmjyE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ghJdDXK0LVxtL4N6xMi5mwAmbL9HS_cOYyRg3cYmjyE.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ns77F2IdDGT8t4dZZmPXzwYTOnOHfKLOgN8Jh8kRzL0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ns77F2IdDGT8t4dZZmPXzwYTOnOHfKLOgN8Jh8kRzL0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rSRIoweGs4a8-ha0EqM7MnzCuhFbk4CoiBMRoho82Bk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rSRIoweGs4a8-ha0EqM7MnzCuhFbk4CoiBMRoho82Bk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/tLoL4_SY93UL6bKORjir0388zTiLk0aWkkehcr16N-M.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/tLoL4_SY93UL6bKORjir0388zTiLk0aWkkehcr16N-M.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EasyGo.iml" afterPath="$PROJECT_DIR$/.idea/EasyGo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="EasyGo.iws" />
@@ -29,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="247">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -109,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20161121184147_create_orders.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20161121184147_create_orders.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20161121184147_create_orders.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,11 +165,11 @@
         <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/products.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/db/migrate/20161121184147_create_orders.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -272,8 +292,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,17 +480,18 @@
       <workItem from="1479753436693" duration="315000" />
       <workItem from="1479753791194" duration="13000" />
       <workItem from="1479753821859" duration="70000" />
+      <workItem from="1479789465462" duration="346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13639000" />
+    <option name="totallyTimeSpent" value="13985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25201938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25605816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -792,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/warehouse_units.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -858,8 +871,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20161121184147_create_orders.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding />
         </state>
       </provider>
