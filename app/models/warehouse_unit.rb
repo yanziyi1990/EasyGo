@@ -7,12 +7,14 @@ class WarehouseUnit < ActiveRecord::Base
       unit.update(sku: skus)
     end
     unit.update(count: unit.sku.split("\n").count)
+    return skus
   end
 
   def self.rescan(box, skus)
     unit=WarehouseUnit.find_by(name: box)
     unit.update(sku: skus)
     unit.update(count: unit.sku.split("\n").count)
+    return skus
   end
 
   def self.checkout(box, skus)
@@ -30,6 +32,10 @@ class WarehouseUnit < ActiveRecord::Base
     current_list.each do |item|
       warehouse_hash[item]=warehouse_hash[item]+1
     end
+
+    checkout_hash
+
+
     unit.update(count: unit.sku.split("\n").count)
   end
 
