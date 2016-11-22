@@ -15,7 +15,7 @@
   end
 
   g.column name: 'Product Description',attribute: 'product_description' do |task|
-    task.product_description
+    task.product_description[0..100]
   end
 
 
@@ -29,9 +29,9 @@
     task.vendor
   end
 
-  %w(image_url1 image_url1 image_url1).each do |image|
+  %w(image_url1 image_url2 image_url3).each do |image|
     g.column do |task|
-      image_tag(task.send(image))
+      image_tag(task.send(image),size: "100x100")
     end
   end
 
