@@ -17,7 +17,7 @@ class WarehouseUnit < ActiveRecord::Base
     return skus
   end
 
-  def self.checkout(box, skus)
+  def self.takeout(box, skus)
     unit=WarehouseUnit.find_by(name: box)
     checkout_list=skus.split("\n")
     current_list=unit.sku.split("\n")
