@@ -1,4 +1,16 @@
 class WarehouseUnit < ActiveRecord::Base
+
+  def self.warehouse_oprate(action, box, skus)
+    case action
+      when 'checkin'
+        self.checkin(box, skus)
+      when 'rescan'
+        self.rescan(box, skus)
+      when 'takeout'
+        self.takeout(box, skus)
+    end
+  end
+
   def self.checkin(box, skus)
     unit=WarehouseUnit.find_by(name: box)
     unless unit.sku.nil?
@@ -44,17 +56,17 @@ class WarehouseUnit < ActiveRecord::Base
         error_hash[key]="Fail to check out #{checkout_hash[key]} #{key}, Doesn't have this item in box #{box}"
       end
     end
-    unit.update(sku:nil)
+    unit.update(sku: nil)
     warehouse_hash.keys.each do |key|
-     if warehouse_hash[key]>0
-       warehouse_hash[key].times do
-         if unit.sku.nil?
-           unit.sku.update(sku:key)
-         else
-           unit.sku.update(sku:unit.sku+"\n"+key)
-         end
-       end
-     end
+      if warehouse_hash[key]>0
+        warehouse_hash[key].times do
+          if unit.sku.nil?
+            unit.sku.update(sku: key)
+          else
+            unit.sku.update(sku: unit.sku+"\n"+key)
+          end
+        end
+      end
     end
     unit.update(count: unit.sku.split("\n").count)
   end
