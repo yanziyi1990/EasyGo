@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @tasks_grid = initialize_grid(Product)
   end
 
   # GET /products/1
