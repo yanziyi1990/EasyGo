@@ -18,6 +18,7 @@ class WarehouseUnit < ActiveRecord::Base
   end
 
   def self.takeout(box, skus)
+    error_hash={}
     unit=WarehouseUnit.find_by(name: box)
     checkout_list=skus.split("\n")
     current_list=unit.sku.split("\n")
@@ -32,10 +33,29 @@ class WarehouseUnit < ActiveRecord::Base
     current_list.each do |item|
       warehouse_hash[item]=warehouse_hash[item]+1
     end
-
-    checkout_hash
-
-
+    checkout_hash.keys.each do |key|
+      if warehouse_hash.key?(key)
+        if warehouse_hash[key]>=checkout_hash[key]
+          warehouse_hash[key]=warehouse_hash[key]-checkout_hash[key]
+        else
+          error_hash[key]="Fail to check out #{checkout_hash[key]} #{key}, Doesn't have enough quantity"
+        end
+      else
+        error_hash[key]="Fail to check out #{checkout_hash[key]} #{key}, Doesn't have this item in box #{box}"
+      end
+    end
+    unit.update(sku:nil)
+    warehouse_hash.keys.each do |key|
+     if warehouse_hash[key]>0
+       warehouse_hash[key].times do
+         if unit.sku.nil?
+           unit.sku.update(sku:key)
+         else
+           unit.sku.update(sku:unit.sku+"\n"+key)
+         end
+       end
+     end
+    end
     unit.update(count: unit.sku.split("\n").count)
   end
 
