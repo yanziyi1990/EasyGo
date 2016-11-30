@@ -1,15 +1,21 @@
 class WarehouseUnitsController < ApplicationController
-  before_action :set_warehouse_unit, only: [:show, :edit, :update, :destroy]
+  #before_action :set_warehouse_unit, only: [:show, :edit, :update, :destroy]
 
   # GET /warehouse_units
   # GET /warehouse_units.json
   def index
-    @warehouse_units = WarehouseUnit.all
+    @warehouse_units = initialize_grid(WarehouseUnit)
   end
 
   # GET /warehouse_units/1
   # GET /warehouse_units/1.json
   def show
+  end
+
+  def operate
+    unless params['operate'].nil?
+    WarehouseUnit.warehouse_oprate(params['operate']['action'], params['operate']['box'], params['operate']['skus'])
+    end
   end
 
   # GET /warehouse_units/new
@@ -19,6 +25,7 @@ class WarehouseUnitsController < ApplicationController
 
   # GET /warehouse_units/1/edit
   def edit
+
   end
 
   # POST /warehouse_units
@@ -62,13 +69,13 @@ class WarehouseUnitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_warehouse_unit
-      @warehouse_unit = WarehouseUnit.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_warehouse_unit
+    @warehouse_unit = WarehouseUnit.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def warehouse_unit_params
-      params.require(:warehouse_unit).permit(:name, :sku, :count, :status)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def warehouse_unit_params
+    params.require(:warehouse_unit).permit(:name, :sku, :count, :status)
+  end
 end

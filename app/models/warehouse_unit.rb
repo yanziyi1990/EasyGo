@@ -14,7 +14,7 @@ class WarehouseUnit < ActiveRecord::Base
   def self.checkin(box, skus)
     unit=WarehouseUnit.find_by(name: box)
     unless unit.sku.nil?
-      unit.update(sku: unit.sku+skus)
+      unit.update(sku: unit.sku+"\n"+skus)
     else
       unit.update(sku: skus)
     end
@@ -68,7 +68,11 @@ class WarehouseUnit < ActiveRecord::Base
         end
       end
     end
-    unit.update(count: unit.sku.split("\n").count)
+    if unit.sku.nil?
+      unit.update(count: 0)
+    else
+      unit.update(count: unit.sku.split("\n").count)
+    end
   end
 
 

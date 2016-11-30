@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  get  'warehouse_units/operate'
+  post 'warehouse_units/operate'
+
   resources :orders
   resources :warehouse_units
+
   devise_for :users
   devise_scope :user do
     authenticated :user do

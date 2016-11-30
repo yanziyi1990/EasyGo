@@ -1,0 +1,15 @@
+<%= form_for :operate, url:warehouse_units_operate_path do |f| %>
+
+    <%= f.label :action %>
+    <%= f.select(:action, ['checkin', 'rescan', 'takeout']) %>
+    <br>
+    <%= f.label :box %>
+    <%= f.text_field :box %>
+    <br>
+    <%= f.label :skus %>
+    <%= f.text_area :skus, cols: 20, rows: 40 %>
+    <br>
+    <%= f.submit %>
+<% end -%>
+
+
