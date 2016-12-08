@@ -174,14 +174,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-sass (~> 4.3)
   jbuilder (~> 2.0)
-  jquery-rails (~> 2.3.0)
-  jquery-ui-rails (~> 4.2.1)
+  jquery-rails
+  jquery-ui-rails
   mysql2
   rails (= 4.2.5.1)
   sass-rails (~> 5.0)

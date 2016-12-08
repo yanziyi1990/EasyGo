@@ -8,7 +8,12 @@ gem 'sqlite3'
 gem 'mysql2'
 gem 'devise'
 # wicegrid
-gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+# gem 'jquery-turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "wice_grid", '3.6.0.pre4'
 gem 'font-awesome-sass',  '~> 4.3'
 # Use SCSS for stylesheets
@@ -21,8 +26,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 2.3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

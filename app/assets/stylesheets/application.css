@@ -12,7 +12,10 @@
  *=
  *= require_tree .
  *= require_self
+ *= require jquery.ui.all
  */
 @import "wice_grid";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
