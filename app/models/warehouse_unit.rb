@@ -1,32 +1,32 @@
 class WarehouseUnit < ActiveRecord::Base
-
   def self.warehouse_oprate(action, box, skus)
     case action
       when 'checkin'
-        self.checkin(box, skus)
+        return self.checkin(box, skus)
       when 'rescan'
-        self.rescan(box, skus)
+        return self.rescan(box, skus)
       when 'takeout'
-        self.takeout(box, skus)
+        return self.takeout(box, skus)
     end
   end
 
   def self.checkin(box, skus)
     unit=WarehouseUnit.find_by(name: box)
-    unless unit.sku.nil?
+    unless unit.sku.nil? || unit.sku=''
       unit.update(sku: unit.sku+"\n"+skus)
     else
       unit.update(sku: skus)
     end
     unit.update(count: unit.sku.split("\n").count)
-    return skus
+    unit.sku.gsub("\r", '')
+    return skus.split("\n").join('|')+'are checked in'
   end
 
   def self.rescan(box, skus)
     unit=WarehouseUnit.find_by(name: box)
     unit.update(sku: skus)
     unit.update(count: unit.sku.split("\n").count)
-    return skus
+    return skus +'are rescan to'+box
   end
 
   def self.takeout(box, skus)
@@ -73,7 +73,16 @@ class WarehouseUnit < ActiveRecord::Base
     else
       unit.update(count: unit.sku.split("\n").count)
     end
+    return error_hash
   end
 
+  def self.clean_dash_r
+    WarehouseUnit.all.each do |box|
+      if !box.sku.nil?
+        box.update(sku: box.sku.gsub("\r", ''))
+        box.update(sku: box.sku.gsub("\n\n", '\n'))
+      end
+    end
+  end
 
 end

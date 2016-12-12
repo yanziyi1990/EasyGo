@@ -1,15 +1,14 @@
-<%= form_for :operate, url:warehouse_units_operate_path do |f| %>
-
-    <%= f.label :action %>
-    <%= f.select(:action, ['checkin', 'rescan', 'takeout']) %>
-    <br>
-    <%= f.label :box %>
-    <%= f.text_field :box %>
-    <br>
-    <%= f.label :skus %>
-    <%= f.text_area :skus, cols: 20, rows: 40 %>
-    <br>
-    <%= f.submit %>
-<% end -%>
-
-
+<div id="inner">
+  <%= form_for :operate, url: warehouse_units_operate_path,class:"form-control" do |f| %>
+      <h4><%= f.label :action,class:"label label-success" %></h4>
+      <%= f.select(:action, ['checkin', 'rescan', 'takeout'],class:"form-control") %>
+      <br>
+      <h4><%= f.label :box,class:"label label-info" %></h4>
+      <%= f.select(:box, WarehouseUnit.pluck(:name),class:"form-control") %>
+      <br>
+      <h4><%= f.label :skus,class:"label label-primary" %></h4>
+      <%= f.text_area :skus, cols: 20, rows: 10,class:"form-control" %>
+      <br>
+      <%= f.submit class:"form-control" %>
+  <% end -%>
+</div>

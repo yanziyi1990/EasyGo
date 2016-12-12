@@ -1,5 +1,5 @@
 class WarehouseUnitsController < ApplicationController
-  #before_action :set_warehouse_unit, only: [:show, :edit, :update, :destroy]
+  after_action :clean
 
   # GET /warehouse_units
   # GET /warehouse_units.json
@@ -14,7 +14,7 @@ class WarehouseUnitsController < ApplicationController
 
   def operate
     unless params['operate'].nil?
-    WarehouseUnit.warehouse_oprate(params['operate']['action'], params['operate']['box'], params['operate']['skus'])
+    @infor=WarehouseUnit.warehouse_oprate(params['operate']['action'], params['operate']['box'], params['operate']['skus'])
     end
   end
 
@@ -77,5 +77,9 @@ class WarehouseUnitsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def warehouse_unit_params
     params.require(:warehouse_unit).permit(:name, :sku, :count, :status)
+  end
+
+  def clean
+    WarehouseUnit.clean_dash_r
   end
 end

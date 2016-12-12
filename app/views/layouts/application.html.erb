@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>EasyGo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,10 @@
     <div class="col-md-12 column">
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -26,58 +29,16 @@
             <li>
               <a href="#">Link</a>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Action</a>
-                </li>
-                <li>
-                  <a href="#">Another action</a>
-                </li>
-                <li>
-                  <a href="#">Something else here</a>
-                </li>
-                <li class="divider">
-                </li>
-                <li>
-                  <a href="#">Separated link</a>
-                </li>
-                <li class="divider">
-                </li>
-                <li>
-                  <a href="#">One more separated link</a>
-                </li>
-              </ul>
-            </li>
           </ul>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" />
-            </div> <button type="submit" class="btn btn-default">Submit</button>
+              <input type="text" class="form-control"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">Link</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Action</a>
-                </li>
-                <li>
-                  <a href="#">Another action</a>
-                </li>
-                <li>
-                  <a href="#">Something else here</a>
-                </li>
-                <li class="divider">
-                </li>
-                <li>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                </li>
-              </ul>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
             </li>
           </ul>
         </div>
@@ -85,38 +46,41 @@
     </div>
   </div>
   <div class="row clearfix">
-    <div class="col-md-4 column">
-      <h2>
-        Heading
-      </h2>
+    <div class="col-md-4 column" id="info_1">
+      <h3>
+        Product Status
+      </h3>
       <p>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      </p>
-      <p>
-        <a class="btn" href="#">View details »</a>
-      </p>
-    </div>
-    <div class="col-md-4 column">
-      <h2>
-        Heading
-      </h2>
-      <p>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      </p>
-      <p>
-        <a class="btn" href="#">View details »</a>
+        <% h_map=Hash.new(0) %>
+        <% WarehouseUnit.where(status: 'active').all.each { |box| box.sku.split("\n").each do |sku|
+          h_map[sku]+=1
+        end } %>
+        <% Product.pluck(:sku).select { |i| h_map[i]<5 }.each do |sku| %>
+            <code>These products are out of quantity</code><br>
+            <%= "<b>#{sku}</b>=>#{h_map[sku]}".html_safe %>
+        <% end %>
       </p>
     </div>
-    <div class="col-md-4 column">
-      <h2>
+    <div class="col-md-4 column" id="info_2">
+      <h3>
         Heading
-      </h2>
+      </h3>
       <p>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+        condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec
+        sed odio dui.
       </p>
+    </div>
+    <div class="col-md-4 column" id="info_3">
+      <h3>
+        Heading
+      </h3>
       <p>
-        <a class="btn" href="#">View details »</a>
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+        condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec
+        sed odio dui.
       </p>
+
     </div>
   </div>
 </div>
