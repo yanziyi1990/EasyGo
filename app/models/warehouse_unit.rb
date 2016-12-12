@@ -11,8 +11,9 @@ class WarehouseUnit < ActiveRecord::Base
   end
 
   def self.checkin(box, skus)
+    skus=skus.gsub("\r", '')
     unit=WarehouseUnit.find_by(name: box)
-    unless unit.sku.nil? || unit.sku=''
+    unless unit.sku.nil? || unit.sku==''
       unit.update(sku: unit.sku+"\n"+skus)
     else
       unit.update(sku: skus)
@@ -23,6 +24,7 @@ class WarehouseUnit < ActiveRecord::Base
   end
 
   def self.rescan(box, skus)
+    skus=skus.gsub("\r", '')
     unit=WarehouseUnit.find_by(name: box)
     unit.update(sku: skus)
     unit.update(count: unit.sku.split("\n").count)
@@ -30,6 +32,7 @@ class WarehouseUnit < ActiveRecord::Base
   end
 
   def self.takeout(box, skus)
+    skus=skus.gsub("\r", '')
     error_hash={}
     unit=WarehouseUnit.find_by(name: box)
     checkout_list=skus.split("\n")
@@ -60,10 +63,10 @@ class WarehouseUnit < ActiveRecord::Base
     warehouse_hash.keys.each do |key|
       if warehouse_hash[key]>0
         warehouse_hash[key].times do
-          if unit.sku.nil?
-            unit.sku.update(sku: key)
+          if unit.sku.nil?||unit.sku==''
+            unit.update(sku: key)
           else
-            unit.sku.update(sku: unit.sku+"\n"+key)
+            unit.update(sku: unit.sku+"\n"+key)
           end
         end
       end
@@ -78,7 +81,7 @@ class WarehouseUnit < ActiveRecord::Base
 
   def self.clean_dash_r
     WarehouseUnit.all.each do |box|
-      if !box.sku.nil?
+      if !(box.sku.nil?||box.sku=='')
         box.update(sku: box.sku.gsub("\r", ''))
         box.update(sku: box.sku.gsub("\n\n", '\n'))
       end
