@@ -19,3 +19,9 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.logo{
+    font-family: 'Molle', cursive;
+    font-size: large;
+    color: #ff8ba7
+}
