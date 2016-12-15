@@ -14,6 +14,8 @@ gem 'jquery-ui-rails'
 gem 'turbolinks'
 # gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem "chartkick"
+
 gem "wice_grid", '3.6.0.pre4'
 gem 'font-awesome-sass',  '~> 4.3'
 # Use SCSS for stylesheets

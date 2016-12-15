@@ -2,6 +2,15 @@
 <html>
 <head>
   <title>EasyGo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $(".pie-chart,.pie-chart-1").slideToggle();
+      });
+    });
+  </script>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -49,12 +58,12 @@
       <h3>
         Product
       </h3>
-      <p>
+      <p class="pie-chart">
         <% h_map=Hash.new(0) %>
         <% WarehouseUnit.where(status: 'active').all.each { |box| box.sku.split("\n").each do |sku|
           h_map[sku]+=1
         end } %>
-        <code>These products are out of quantity</code><br>
+        <code>Products almost out of quantity</code><br>
         <% Product.pluck(:sku).select { |i| h_map[i]<5 }.each do |sku| %>
             <%= "<b>#{sku}</b> : #{h_map[sku]}</br>".html_safe %>
         <% end %>
@@ -62,19 +71,17 @@
     </div>
     <div class="col-md-4 column" id="info_2">
       <h3>
-        Orders
+        Orders <div id="flip"><span class="glyphicon glyphicon-download"></span></div>
       </h3>
-      <p>
-        There are: <b><%= Order.where(order_status: 'waiting_shipping').count %></b> orders waiting for shipment
-        <br>
-        There are: <b><%= Order.where(warehouse_status:'unpicked').count %> </b>orders waiting for pick up in warehouse
-      </p>
+      <div class="pie-chart-1">
+        <%= pie_chart Order.group(:order_status).count %>
+      </div>
     </div>
     <div class="col-md-4 column" id="info_3">
       <h3>
         Heading
       </h3>
-      <p>
+      <p class="pie-chart">
         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
         condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec
         sed odio dui.
@@ -86,3 +93,4 @@
 <%= yield %>
 </body>
 </html>
+
