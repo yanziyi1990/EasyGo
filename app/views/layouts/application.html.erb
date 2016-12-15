@@ -47,7 +47,7 @@
   <div class="row clearfix">
     <div class="col-md-4 column" id="info_1">
       <h3>
-        Product Status
+        Product
       </h3>
       <p>
         <% h_map=Hash.new(0) %>
@@ -65,9 +65,9 @@
         Orders
       </h3>
       <p>
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-        condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec
-        sed odio dui.
+        There are: <b><%= Order.where(order_status: 'waiting_shipping').count %></b> orders waiting for shipment
+        <br>
+        There are: <b><%= Order.where(warehouse_status:'unpicked').count %> </b>orders waiting for pick up in warehouse
       </p>
     </div>
     <div class="col-md-4 column" id="info_3">
