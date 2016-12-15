@@ -104,6 +104,7 @@ class WarehouseUnit < ActiveRecord::Base
 
   def self.print_picklist(skus)
     CSV.open("/tmp/ pick_up_list.csv", 'w+b') do |f|
+      f<<["Location", "Sku", "Quantity"]
       map=WarehouseUnit.get_warehouse_map
       skus.each do |sku|
         map.each do |k, v|
