@@ -4,8 +4,8 @@
   <title>EasyGo</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $("#flip").click(function(){
+    $(document).ready(function () {
+      $("#flip").click(function () {
         $(".pie-chart,.pie-chart-1").slideToggle();
       });
     });
@@ -31,11 +31,14 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Link</a>
+            <li>
+              <a href="/orders">Order</a>
             </li>
             <li>
-              <a href="#">Link</a>
+              <a href="/products">Product</a>
+            </li>
+            <li>
+              <a href="/warehouse_units/operate">Warehouse</a>
             </li>
           </ul>
           <form class="navbar-form navbar-left" role="search">
@@ -46,7 +49,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <%= link_to("Logout:#{current_user.email}", destroy_user_session_path, :method => :delete) %>
+              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
             </li>
           </ul>
         </div>
@@ -56,7 +59,7 @@
   <div class="row clearfix">
     <div class="col-md-4 column" id="info_1">
       <h3>
-        Product
+        Storage
       </h3>
       <p class="pie-chart">
         <% h_map=Hash.new(0) %>
@@ -71,22 +74,22 @@
     </div>
     <div class="col-md-4 column" id="info_2">
       <h3>
-        Orders <div id="flip"><span class="glyphicon glyphicon-download"></span></div>
+        Orders
+        <div id="flip"><span class="glyphicon glyphicon-download"></span></div>
       </h3>
-      <div class="pie-chart-1">
+      <div class="pie-chart">
         <%= pie_chart Order.group(:order_status).count %>
       </div>
     </div>
     <div class="col-md-4 column" id="info_3">
       <h3>
-        Heading
+        Warehouse
       </h3>
-      <p class="pie-chart">
-        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-        condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec
-        sed odio dui.
-      </p>
-
+      <div class="pie-chart">
+        <p>There are <%= WarehouseUnit.where(status: 'active').count %> warehouse unit in active</p><br>
+        <p>There are <%= WarehouseUnit.where(status: 'inactive').count %> warehouse unit <b style="color: red">not</b>
+          in active</p>
+      </div>
     </div>
   </div>
 </div>
