@@ -88,4 +88,36 @@ class WarehouseUnit < ActiveRecord::Base
     end
   end
 
+  def self.get_warehouse_map
+    map=Hash.new do |k, v|
+      k[v]=Hash.new
+    end
+    WarehouseUnit.where(status: 'active').each do |u|
+      qty_hash=Hash.new(0)
+      u.sku.split("\n").each do |sku|
+        qty_hash[sku]=qty_hash[sku]+1
+      end
+      map[u.name]=qty_hash
+    end
+    return map
+  end
+
+  def self.print_picklist(skus)
+    CSV.open("/tmp/ pick_up_list.csv", 'w+b') do |f|
+      map=WarehouseUnit.get_warehouse_map
+      skus.each do |sku|
+        map.each do |k, v|
+          if v.key?(sku)
+            if v[sku]>=1
+              v[sku]=v[sku]-1
+              f<<[k, sku, 1]
+              break
+            end
+          end
+        end
+      end
+    end
+  end
+
+
 end
