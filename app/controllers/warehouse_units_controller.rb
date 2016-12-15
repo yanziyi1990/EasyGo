@@ -12,9 +12,14 @@ class WarehouseUnitsController < ApplicationController
   def show
   end
 
+  def print
+    file=WarehouseUnit.print_picklist(Order.where(warehouse_status: 'unpicked').pluck(:sku,:order_number))
+    send_file file
+  end
+
   def operate
     unless params['operate'].nil?
-    @infor=WarehouseUnit.warehouse_oprate(params['operate']['action'], params['operate']['box'], params['operate']['skus'])
+      @infor=WarehouseUnit.warehouse_oprate(params['operate']['action'], params['operate']['box'], params['operate']['skus'])
     end
   end
 

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   get  'warehouse_units/operate'
+  get  'warehouse_units/print'
   post 'warehouse_units/operate'
+
 
   resources :orders
   resources :warehouse_units

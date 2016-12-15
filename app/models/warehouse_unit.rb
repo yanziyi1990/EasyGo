@@ -103,21 +103,25 @@ class WarehouseUnit < ActiveRecord::Base
   end
 
   def self.print_picklist(skus)
-    CSV.open("/tmp/ pick_up_list.csv", 'w+b') do |f|
-      f<<["Location", "Sku", "Quantity"]
+    file_name="/tmp/ pick_up_list_#{Date.today}.csv"
+    CSV.open(file_name, 'w+b') do |f|
+      f<<["Order Number","Location", "Sku", "Quantity"]
       map=WarehouseUnit.get_warehouse_map
-      skus.each do |sku|
+      skus.each do |i|
+        sku=i[0]
+        order_number=i[1]
         map.each do |k, v|
           if v.key?(sku)
             if v[sku]>=1
               v[sku]=v[sku]-1
-              f<<[k, sku, 1]
+              f<<[order_number,k, sku, 1]
               break
             end
           end
         end
       end
     end
+    return file_name
   end
 
 
