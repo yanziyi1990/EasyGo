@@ -1,7 +1,17 @@
 <div style="margin: 1cm">
   <%= grid(@orders) do |g|
     (Order.attribute_names-['id', 'created_at', 'updated_at']).each do |column|
-      g.column name: column.to_s.titleize, attribute: column
+      if column=='latest_shipping_date'
+        g.column name: column.to_s.titleize, attribute: column do |c|
+          if c.send(column)<=Date.today
+            [c.send(column), {style: 'background-color:red;'}]
+          else
+            c.send(column)
+          end
+        end
+      else
+        g.column name: column.to_s.titleize, attribute: column
+      end
     end
   end -%>
 </div>
