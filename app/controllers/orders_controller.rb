@@ -61,14 +61,26 @@ class OrdersController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])
-    end
+  def mark_as_picked
+    @current= Order.find(params[:id])
+    @current.update_attributes(warehouse_status: 'picked')
+    redirect_to :back
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:order_number, :sku, :shipping_address, :latest_shipping_date, :order_status, :warehouse_status)
-    end
+  def mark_as_shipped
+    @current= Order.find(params[:id])
+    @current.update_attributes(order_status: 'shipped')
+    redirect_to :back
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order
+    @order = Order.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_params
+    params.require(:order).permit(:id, :order_number, :sku, :shipping_address, :latest_shipping_date, :order_status, :warehouse_status)
+  end
 end

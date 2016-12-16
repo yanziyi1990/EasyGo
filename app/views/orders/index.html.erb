@@ -13,5 +13,13 @@
         g.column name: column.to_s.titleize, attribute: column
       end
     end
+
+    g.column name: 'Mark Pick' do |column|
+      link_to 'Mark Pick', mark_pick_path(column)
+    end
+
+    g.column name: 'Mark Ship' do |column|
+      link_to 'Mark Ship', mark_ship_path(column)
+    end
   end -%>
 </div>

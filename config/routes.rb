@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get  'warehouse_units/operate'
-  get  'warehouse_units/print'
+  get 'warehouse_units/operate'
+  get 'warehouse_units/print'
   post 'warehouse_units/operate'
 
 
@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
   resources :products
   resources :orders
+  get 'orders/mark_as_picked/:id' => 'orders#mark_as_picked', as: 'mark_pick'
+  get 'orders/mark_as_shipped/:id' => 'orders#mark_as_shipped', as: 'mark_ship'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
