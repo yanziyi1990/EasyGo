@@ -4,30 +4,30 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  reconnect: true
-  database: acapella
-  pool: 5
-  host: 127.0.0.1
-  port: 3306
-  username: root
-  password: password
-  socket: /tmp/mysql.sockv
-
-development:
-  <<: *default
-  adapter: mysql2
-  encoding: utf8
-  reconnect: true
-  database: acapella
-  pool: 5
-  host: 127.0.0.1
-  port: 3306
-  username: root
-  password: password
-  socket: /tmp/mysql.sock
+#default: &default
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: true
+#  database: acapella
+#  pool: 5
+#  host: 127.0.0.1
+#  port: 3306
+#  username: root
+#  password: password
+#  socket: /tmp/mysql.sockv
+#
+#development:
+#  <<: *default
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: true
+#  database: acapella
+#  pool: 5
+#  host: 127.0.0.1
+#  port: 3306
+#  username: root
+#  password: password
+#  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased andg
 # re-generated from your development database when you run "rake".
@@ -36,9 +36,9 @@ development:
 #  <<: *default
 #  database: postgresql
 
-#production:
-#  adapter: postgresql
-#  encoding: unicode
-#  database: postgres://ozudjjkuyoogva:219d4982b872f56ef38b4fbfb12ae144ecd3c758235861d3cc506899dbc1e17a@ec2-23-21-219-105.compute-1.amazonaws.com:5432/dck14mhpsgijn
-#  pool: 5
-#  timeout: 5000
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: postgres://ozudjjkuyoogva:219d4982b872f56ef38b4fbfb12ae144ecd3c758235861d3cc506899dbc1e17a@ec2-23-21-219-105.compute-1.amazonaws.com:5432/dck14mhpsgijn
+  pool: 5
+  timeout: 5000
