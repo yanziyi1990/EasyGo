@@ -11,7 +11,8 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-//= require wice_grid
 //= require jquery-ui
+//= require wice_grid
+//= require jquery-ui/datepicker
 //= require_tree .
 

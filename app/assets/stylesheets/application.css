@@ -11,6 +11,7 @@
  * file per style scope.
  *=
  *= require jquery-ui
+ *= require jquery-ui/datepicker
  *= require_tree .
  *= require_self
  */
@@ -19,7 +20,6 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 .logo{
     font-family: 'Molle', cursive;
     font-size: large;
