@@ -4,30 +4,30 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-#default: &default
-#  adapter: mysql2
-#  encoding: utf8
-#  reconnect: true
-#  database: acapella
-#  pool: 5
-#  host: 127.0.0.1
-#  port: 3306
-#  username: root
-#  password: password
-#  socket: /tmp/mysql.sockv
-#
-#development:
-#  <<: *default
-#  adapter: mysql2
-#  encoding: utf8
-#  reconnect: true
-#  database: acapella
-#  pool: 5
-#  host: 127.0.0.1
-#  port: 3306
-#  username: root
-#  password: password
-#  socket: /tmp/mysql.sock
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: acapella
+  pool: 5
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: password
+  socket: /tmp/mysql.sockv
+
+development:
+  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: acapella
+  pool: 5
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: password
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased andg
 # re-generated from your development database when you run "rake".
