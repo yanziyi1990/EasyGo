@@ -37,8 +37,8 @@
 #  database: postgresql
 #
 production:
-  <<: *default
+  adapter: postgresql
   encoding: unicode
-  database: postgresql
-  url:  <%= ENV["DATABASE_URL"] %>
-  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  database: postgres://ozudjjkuyoogva:219d4982b872f56ef38b4fbfb12ae144ecd3c758235861d3cc506899dbc1e17a@ec2-23-21-219-105.compute-1.amazonaws.com:5432/dck14mhpsgijn
+  pool: 5
+  timeout: 5000
