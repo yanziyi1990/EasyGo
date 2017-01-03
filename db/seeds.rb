@@ -1,7 +1,3 @@
-User.create!([
-  {email: "yanziyi1991@gmail.com", encrypted_password: "$2a$10$Qg.RpxkGc4x5iOPPLh0Obe6V7eIK05EMQ/p6CpfpT52UVFSUo02ES", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: "2017-01-03 06:15:52", sign_in_count: 18, current_sign_in_at: "2017-01-03 06:15:52", last_sign_in_at: "2016-12-21 04:00:48", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "287579097@qq.com", encrypted_password: "$2a$10$gz4f3Nycq5DwLfpyTHvDw.CjhV/sW6D94FqqhEkfKUSU4.zhpqt1i", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-12-21 05:05:39", last_sign_in_at: "2016-12-21 05:05:39", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
-])
 Order.create!([
   {order_number: "12-34567", sku: "SP-BAL-WIL-EVO-295", shipping_address: "1001 National Ave. Apt 310", latest_shipping_date: "2016-12-22", order_status: "shipped", customer_name: "Tom", warehouse_status: "picked"},
   {order_number: "21-34567", sku: "SP-BAL-WIL-EVO-295", shipping_address: "123 commordore Dr. 110", latest_shipping_date: "2016-12-23", order_status: "waiting_shipping", customer_name: "Lee", warehouse_status: "unpicked"},
