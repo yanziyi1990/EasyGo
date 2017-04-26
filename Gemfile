@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'whenever', :require => false
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'sprockets', '3.6.3'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
