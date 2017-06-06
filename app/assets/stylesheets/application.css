@@ -13,12 +13,12 @@
 
 /*
  * = require jquery-ui
- * = require jquery-ui/datepicker
  */
-@import "wice_grid";
-@import "font-awesome-sprockets";
+@import "wice_grid.scss";
+@import "_font-awesome-sprockets.scss";
 @import "font-awesome";
-@import "bootstrap";
+@import "_bootstrap.scss";
+@import "_bootstrap-sprockets.scss";
 
 .logo{
     font-family: 'Molle', cursive;
