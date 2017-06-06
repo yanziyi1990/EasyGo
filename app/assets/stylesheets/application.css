@@ -19,6 +19,8 @@
 @import "font-awesome";
 @import "_bootstrap.scss";
 @import "_bootstrap-sprockets.scss";
+@import "jquery-ui";
+@import "jquery-ui.css";
 
 .logo{
     font-family: 'Molle', cursive;
