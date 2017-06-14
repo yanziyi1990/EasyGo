@@ -31525,7 +31525,7 @@ return jQuery;
   setupJqueryUiDatepicker = function() {
     var locale;
     if (!$.datepicker) {
-      alert("Seems like you do not have jQuery datepicker (http://jqueryui.com/demos/datepicker/)\ninstalled. Either install it pick another filter with :filter_type.");
+      //alert("Seems like you do not have jQuery datepicker (http://jqueryui.com/demos/datepicker/)\ninstalled. Either install it pick another filter with :filter_type.");
     }
     if (locale = $('.date-filter.wg-jquery-datepicker input[type=hidden]').data('locale')) {
       $.datepicker.setDefaults($.datepicker.regional[locale]);
