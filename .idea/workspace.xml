@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="741f3cec-754e-414a-87af-58d113b850e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EasyGo" afterPath="$PROJECT_DIR$/EasyGo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="EasyGo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,16 +58,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="warehouse_units.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/warehouse_units.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EasyGo/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="31532" column="19" lean-forward="true" selection-start-line="31532" selection-start-column="19" selection-end-line="31532" selection-end-column="19" />
+            <state relative-caret-position="400">
+              <caret line="31564" column="33" lean-forward="true" selection-start-line="31564" selection-start-column="33" selection-end-line="31564" selection-end-column="33" />
               <folding>
                 <marker date="1497476819000" expanded="true" signature="61046:61117" ph="..." />
                 <marker date="1497476819000" expanded="true" signature="61140:61164" ph="..." />
@@ -114,21 +102,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/warehouse_units/_form.html.erb">
+      <file leaf-file-name="application-200ea8a282d2f2dee25e6d537fdf59fd8f2509cb8ee363d056715df5a146d32f.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/application-200ea8a282d2f2dee25e6d537fdf59fd8f2509cb8ee363d056715df5a146d32f.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="31527" column="59" lean-forward="false" selection-start-line="31527" selection-start-column="15" selection-end-line="31527" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operate.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/warehouse_units/operate.html.erb">
+      <file leaf-file-name="application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="215">
+              <caret line="31530" column="20" lean-forward="true" selection-start-line="31530" selection-start-column="20" selection-end-line="31530" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-dc84ee2e36e7f7eb42d7387df9db82b01d7d14d6720c5c7528ac290d775a1e2c.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EasyGo/public/assets/application-dc84ee2e36e7f7eb42d7387df9db82b01d7d14d6720c5c7528ac290d775a1e2c.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="3" column="12185" lean-forward="false" selection-start-line="3" selection-start-column="12180" selection-end-line="3" selection-end-column="12185" />
               <folding />
             </state>
           </provider>
@@ -159,27 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wicegr</find>
-      <find>assets</find>
-      <find>boot</find>
-      <find>rails</find>
-      <find>nokogiri</find>
-      <find>d</find>
-      <find>datep</find>
-      <find>datepi</find>
-      <find>datepic</find>
-      <find>datepicker</find>
-      <find>date</find>
-      <find>PRODUCT</find>
-      <find>require</find>
-      <find>collapse navbar-collapse</find>
-      <find>logout</find>
-      <find>flip</find>
-      <find>date_p</find>
-      <find>jquery</find>
-      <find>:f</find>
-      <find>:fi</find>
-      <find>:fil</find>
       <find>:filt</find>
       <find>:filte</find>
       <find>:filter</find>
@@ -187,6 +164,29 @@
       <find>:filter_tyo</find>
       <find>:filter_ty</find>
       <find>:filter_type</find>
+      <find>S</find>
+      <find>Seems</find>
+      <find>Seems lik</find>
+      <find>Seems like</find>
+      <find>Seems like</find>
+      <find>Seems like you</find>
+      <find>Seems like you</find>
+      <find>Seems like you d</find>
+      <find>Seems like you do</find>
+      <find>Seems like you do</find>
+      <find>Seems like you do n</find>
+      <find>Seems like you do not ha</find>
+      <find>Seems like you do not have</find>
+      <find>Seems like you do not have</find>
+      <find>Seems like you do not have j</find>
+      <find>Seems like you do not have jQ</find>
+      <find>Seems like you do not have jQuer</find>
+      <find>Seems like you do not have jQuery</find>
+      <find>Seems like you do not have jQuery</find>
+      <find>Seems like you do not have jQuery date</find>
+      <find>Seems like you do not have jQuery datep</find>
+      <find>Seems like you do not have jQuery datepicker</find>
+      <find>Seems</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/products.scss" />
         <option value="$PROJECT_DIR$/db/migrate/20161121184147_create_orders.rb" />
         <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
@@ -244,6 +243,9 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/EasyGo/public/assets/application-200ea8a282d2f2dee25e6d537fdf59fd8f2509cb8ee363d056715df5a146d32f.js" />
         <option value="$PROJECT_DIR$/EasyGo/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js" />
+        <option value="$PROJECT_DIR$/public/assets/application-200ea8a282d2f2dee25e6d537fdf59fd8f2509cb8ee363d056715df5a146d32f.js" />
+        <option value="$PROJECT_DIR$/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js" />
+        <option value="$PROJECT_DIR$/EasyGo/public/assets/application-dc84ee2e36e7f7eb42d7387df9db82b01d7d14d6720c5c7528ac290d775a1e2c.js" />
       </list>
     </option>
   </component>
@@ -722,12 +724,12 @@
       <workItem from="1493178925299" duration="164000" />
       <workItem from="1496705039148" duration="4790000" />
       <workItem from="1497382024539" duration="181000" />
-      <workItem from="1497382481456" duration="14508000" />
+      <workItem from="1497382481456" duration="14845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94017000" />
+    <option name="totallyTimeSpent" value="94354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,27 +783,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/test_post.html.erb" />
     <entry file="file://$PROJECT_DIR$/EasyGo/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1181,8 +1162,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EasyGo/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="31532" column="19" lean-forward="true" selection-start-line="31532" selection-start-column="19" selection-end-line="31532" selection-end-column="19" />
+        <state relative-caret-position="400">
+          <caret line="31564" column="33" lean-forward="true" selection-start-line="31564" selection-start-column="33" selection-end-line="31564" selection-end-column="33" />
           <folding>
             <marker date="1497476819000" expanded="true" signature="61046:61117" ph="..." />
             <marker date="1497476819000" expanded="true" signature="61140:61164" ph="..." />
@@ -1191,6 +1172,30 @@
             <marker date="1497476819000" expanded="true" signature="339432:339448" ph="..." />
             <marker date="1497476819000" expanded="true" signature="462789:462795" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/application-200ea8a282d2f2dee25e6d537fdf59fd8f2509cb8ee363d056715df5a146d32f.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="31527" column="59" lean-forward="false" selection-start-line="31527" selection-start-column="15" selection-end-line="31527" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/application-1f6e3ea1e5c61e6c31f010b734dc4c0583b18b6d7af9334c6ef6de49a9abfcb8.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="31530" column="20" lean-forward="true" selection-start-line="31530" selection-start-column="20" selection-end-line="31530" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EasyGo/public/assets/application-dc84ee2e36e7f7eb42d7387df9db82b01d7d14d6720c5c7528ac290d775a1e2c.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="3" column="12185" lean-forward="false" selection-start-line="3" selection-start-column="12180" selection-end-line="3" selection-end-column="12185" />
+          <folding />
         </state>
       </provider>
     </entry>
