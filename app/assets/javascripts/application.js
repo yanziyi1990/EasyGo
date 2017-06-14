@@ -12,6 +12,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require bootstrap-datepicker
 //= require wice_grid.js
 //= require_tree .
