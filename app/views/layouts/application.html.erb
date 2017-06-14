@@ -4,61 +4,60 @@
   <title>EasyGo</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $("#flip").click(function () {
-        $(".pie-chart,.pie-chart-1").slideToggle();
+      $(document).ready(function () {
+          $(".pie-chart,.pie-chart-1").hide();
+          $("#flip").click(function () {
+              $(".pie-chart,.pie-chart-1").slideToggle('slow',changeClass());
+          });
       });
-    });
+
+      function changeClass(){
+          var coin = document.getElementById("memeda");
+
+          if (coin.className=="glyphicon glyphicon-upload")
+              coin.className="glyphicon glyphicon-download";
+          else
+              coin.className="glyphicon glyphicon-upload"
+      }
+
+
+
+
   </script>
   <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
   <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-  <div class="row clearfix">
-    <div class="col-md-12 column">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><p class="logo">Easy Go</p></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/orders">Order</a>
-            </li>
-            <li>
-              <a href="/products">Product</a>
-            </li>
-            <li>
-              <a href="/warehouse_units/operate">Warehouse</a>
-            </li>
-            <li>
-              <a href="/warehouse_units/print">Pick List</a>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control"/>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">EasyGo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" style="display: inline-block">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/orders">Order</a></li>
+        <li><a href="/products">Product</a></li>
+        <li> <a href="/warehouse_units/operate">Warehouse</a></li>
+        <li> <a href="/warehouse_units/print">Pick List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+      </ul>
     </div>
   </div>
+</nav>
+<div class="container">
   <div class="row clearfix">
     <div class="col-md-4 column" id="info_1">
       <h3>
@@ -78,7 +77,8 @@
     <div class="col-md-4 column" id="info_2">
       <h3>
         Orders
-        <div id="flip"><span class="glyphicon glyphicon-download"></span></div>
+        <br>
+        <div id="flip"><span id="memeda" class="glyphicon glyphicon-download"></span></div>
       </h3>
       <div class="pie-chart">
         <%= pie_chart Order.group(:order_status).count %>
@@ -90,12 +90,14 @@
       </h3>
       <div class="pie-chart">
         <p>There are <%= WarehouseUnit.where(status: 'active').count %> warehouse unit in active</p><br>
-        <p>There are <%= WarehouseUnit.where(status: 'inactive').count %> warehouse unit <b style="color: red">not</b>
+        <p>There are <%= WarehouseUnit.where(status: 'inactive').count %> warehouse unit <b style="color: #ff3a6c">not</b>
           in active</p>
       </div>
     </div>
   </div>
 </div>
+
+
 <%= yield %>
 </body>
 </html>
